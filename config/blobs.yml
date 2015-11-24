@@ -1,1 +1,5 @@
---- {}
+---
+bosh-errand-resource/rootfs.tar:
+  object_id: a25d6589-f7ab-45e6-8527-4d521e391d7d
+  sha: 99b2434fb85ba0300f3dcc017d89cb40f99b7fcc
+  size: 78736896
