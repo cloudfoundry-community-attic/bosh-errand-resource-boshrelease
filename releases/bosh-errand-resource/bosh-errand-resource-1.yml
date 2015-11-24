@@ -1,0 +1,20 @@
+---
+packages:
+- name: bosh-errand-resource
+  version: b61e8c2e5dd432f48d946944a2f9b6102324d751
+  fingerprint: b61e8c2e5dd432f48d946944a2f9b6102324d751
+  sha1: 702c5fa7417f500441fdcbaed7abe93418339b2e
+  dependencies: []
+jobs:
+- name: just_install_packages
+  version: 8294d01b5606e3959ce224586cb93c2d3c21c680
+  fingerprint: 8294d01b5606e3959ce224586cb93c2d3c21c680
+  sha1: baffb1a50ad09215e70cf72351635115f135e605
+license:
+  version: 8da6eb3df1dce64b78610e7cbaf4245d66e88f1c
+  fingerprint: 8da6eb3df1dce64b78610e7cbaf4245d66e88f1c
+  sha1: cbd48cbe56bb28303bfb9a9ece9393ddf218ae65
+commit_hash: 3f35b578
+uncommitted_changes: true
+name: bosh-errand-resource
+version: '1'
