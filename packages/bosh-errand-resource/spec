@@ -1,0 +1,5 @@
+---
+name: bosh-errand-resource
+dependencies: []
+files:
+- bosh-errand-resource/rootfs.tar

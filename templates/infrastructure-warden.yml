@@ -1,0 +1,96 @@
+meta:
+  environment: bosh-errand-resource-warden
+
+  stemcell:
+    name: bosh-warden-boshlite-ubuntu
+    version: latest
+
+update:
+  canaries: 1
+  max_in_flight: 50
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000
+
+jobs:
+  - name: just_install_packages
+    networks:
+      - name: bosh_errand_resource1
+
+compilation:
+  cloud_properties:
+    name: random
+
+resource_pools:
+  - name: small_z1
+    cloud_properties:
+      name: random
+
+networks:
+- name: bosh_errand_resource1
+  # Assumes up to 5 VMs, including 1 static and 4 dynamic.
+  # Plus 5 (double the size) unused IPs, due to BOSH bug/quirk.
+  subnets:
+  - cloud_properties:
+      name: random
+    range: 10.244.25.0/30
+    reserved:
+    - 10.244.25.1
+    static:
+    - 10.244.25.2
+
+  - cloud_properties:
+      name: random
+    range: 10.244.25.4/30
+    reserved:
+    - 10.244.25.5
+    static: []
+  - cloud_properties:
+      name: random
+    range: 10.244.25.8/30
+    reserved:
+    - 10.244.25.9
+    static: []
+  - cloud_properties:
+      name: random
+    range: 10.244.25.12/30
+    reserved:
+    - 10.244.25.13
+    static: []
+  - cloud_properties:
+      name: random
+    range: 10.244.25.16/30
+    reserved:
+    - 10.244.25.17
+    static: []
+
+  # Bonus double-sized network required due to BOSH oddity
+  - cloud_properties:
+      name: random
+    range: 10.244.25.20/30
+    reserved:
+    - 10.244.25.21
+    static: []
+  - cloud_properties:
+      name: random
+    range: 10.244.25.24/30
+    reserved:
+    - 10.244.25.25
+    static: []
+  - cloud_properties:
+      name: random
+    range: 10.244.25.28/30
+    reserved:
+    - 10.244.25.29
+    static: []
+  - cloud_properties:
+      name: random
+    range: 10.244.25.32/30
+    reserved:
+    - 10.244.25.33
+    static: []
+  - cloud_properties:
+      name: random
+    range: 10.244.25.36/30
+    reserved:
+    - 10.244.25.37
+    static: []

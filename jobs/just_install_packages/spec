@@ -1,0 +1,6 @@
+---
+name: just_install_packages
+packages: [bosh-errand-resource]
+templates:
+  ignoreme: ignoreme
+properties: {}

@@ -1,0 +1,6 @@
+---
+blobstore:
+  provider: s3
+  options:
+    bucket_name: bosh-errand-resource-boshrelease
+final_name: bosh-errand-resource

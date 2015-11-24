@@ -1,0 +1,18 @@
+---
+jobs:
+- name: alert
+  public: true
+  plan:
+  - put: errand-prod
+    params:
+      manifest: prod.yml
+      errand: smoke_tests
+
+resources:
+- name: errand-prod
+  type: bosh-errand
+  source:
+    target: {{bosh-target}}
+    username: admin
+    password: admin
+    deployment: cf-prod
