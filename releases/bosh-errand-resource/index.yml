@@ -2,4 +2,6 @@
 builds:
   cfb78040-e250-4fbb-8081-caaaa48e6adf:
     version: '1'
+  1f89daad-3b20-4881-9559-48605806a2a7:
+    version: '2'
 format-version: '2'
