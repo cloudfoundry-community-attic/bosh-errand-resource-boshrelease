@@ -57,4 +57,4 @@ resources:
     email: {{docker-hub-email}}
     username: {{docker-hub-username}}
     password: {{docker-hub-password}}
-    repository: clutteredraisins/bosh-errand-resource
+    repository: starkandwayne/bosh-errand-resource
