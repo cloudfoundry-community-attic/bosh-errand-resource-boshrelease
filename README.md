@@ -7,7 +7,7 @@ Final releases are automatically created based on any changes to the upstream bo
 
 See the build pipeline https://ci.starkandwayne.com/pipelines/bosh-errand-resource-boshrelease for status.
 
-Final releases are available on https://bosh.io/releases as well as this project's own [GitHub releases](https://github.com/cloudfoundry-community/bosh-errand-resource-boshrelease/releases).
+Final releases are available on https://bosh.io/releases as well as this project's own [GitHub releases](https://github.com/starkandwayne/bosh-errand-resource-boshrelease/releases).
 
 Installation
 ------------
@@ -15,7 +15,7 @@ Installation
 To use this bosh release, first upload it to the BOSH/bosh-lite that is running Concourse:
 
 ```
-bosh upload release https://bosh.io/d/github.com/cloudfoundry-community/bosh-errand-resource-boshrelease
+bosh upload release https://bosh.io/d/github.com/starkandwayne/bosh-errand-resource-boshrelease
 ```
 
 Next, update your Concourse deployment manifest to add the resource.
