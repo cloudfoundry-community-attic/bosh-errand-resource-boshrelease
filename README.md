@@ -42,43 +42,14 @@ jobs:
     - {release: bosh-errand-resource, name: just_install_packages}
 ```
 
-The final change is to explicitly list all the resource types (they are implicit) and add the `bosh-errand-resource` package to the list:
+The final change is to explicitly add the `bosh-errand-resource` package to the list:
 
 ```yaml
 jobs:
 - name: worker
   ...
   properties:
-    groundcrew:
-      resource_types:
-      - type: archive
-        image: /var/vcap/packages/archive_resource
-      - type: cf
-        image: /var/vcap/packages/cf_resource
-      - type: docker-image
-        image: /var/vcap/packages/docker_image_resource
-      - type: git
-        image: /var/vcap/packages/git_resource
-      - type: s3
-        image: /var/vcap/packages/s3_resource
-      - type: semver
-        image: /var/vcap/packages/semver_resource
-      - type: time
-        image: /var/vcap/packages/time_resource
-      - type: tracker
-        image: /var/vcap/packages/tracker_resource
-      - type: pool
-        image: /var/vcap/packages/pool_resource
-      - type: vagrant-cloud
-        image: /var/vcap/packages/vagrant_cloud_resource
-      - type: github-release
-        image: /var/vcap/packages/github_release_resource
-      - type: bosh-io-release
-        image: /var/vcap/packages/bosh_io_release_resource
-      - type: bosh-io-stemcell
-        image: /var/vcap/packages/bosh_io_stemcell_resource
-      - type: bosh-deployment
-        image: /var/vcap/packages/bosh_deployment_resource
+      additional_resource_types:
       - type: bosh-errand
         image: /var/vcap/packages/bosh-errand-resource
 ```
